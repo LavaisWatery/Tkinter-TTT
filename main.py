@@ -69,6 +69,10 @@ class TTT(tk.Tk):
                 self.resetGame()
                 return
 
+        if self.turns >= 9:
+            messagebox.showinfo("Tic Tac Toe", "The game has come to a draw.")
+            self.resetGame()
+
     def resetGame(self):
         for button in self.btnlist:
             button.config(text="", bg="white", state="normal")
